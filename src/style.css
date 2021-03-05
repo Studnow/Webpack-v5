@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Amarante';
+  src: url('./amarante-v7-latin-regular.woff') format('woff'),
+      url('./amarante-v7-latin-regular.eot') format('eot');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hello {
+  color: blue;
+  height: fit-content;
+  font-family: 'Amarante';
+  background-image: url('./iamp-logo.svg');
+  background-repeat: no-repeat;
+}
