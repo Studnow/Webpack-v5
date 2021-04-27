@@ -1,3 +1,5 @@
+/* @import Logo from "./component/iamp-logo.svg"; */
+
 @font-face {
   font-family: 'Amarante';
   src: url('./amarante-v7-latin-regular.woff') format('woff'),
@@ -8,8 +10,11 @@
 
 .hello {
   color: blue;
-  height: fit-content;
+  border-color: powderblue;
+  border-style: solid;
+  border-width: 2px;
+  height: 16rem;
   font-family: 'Amarante';
-  background-image: url('./iamp-logo.svg');
+  background-image: url('./component/iamp-logo.svg');
   background-repeat: no-repeat;
 }
