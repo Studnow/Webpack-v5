@@ -12,7 +12,7 @@ const PATHS = {
 const PAGES_DIR = `${PATHS.src}/pages`;
 const PAGES = fs
   .readdirSync(PAGES_DIR)
-  .filter((filename) => filename.endsWith(".html")); // Для html без pug оставить .html
+  .filter((filename) => filename.endsWith(".pug")); // Для html без pug оставить .html
 
 module.exports = {
   entry: {
@@ -77,7 +77,7 @@ module.exports = {
       (page) =>
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
-          filename: `./${page}`, // .replace(/\.pug/, ".html")}`, // Для html без pug оставить просто ${page}
+          filename: `./${page.replace(/\.pug/, ".html")}`, // Для html без pug оставить просто ${page}
         })
     ),
   ],

@@ -11,7 +11,7 @@ const component = () => {
   const element = document.createElement("div");
   const btn = document.createElement("button");
 
-  element.innerHTML = "Hello webpack. HMR is not";
+  element.innerHTML = "Hello webpack. HMR is not working";
   element.classList.add("hello");
   element.addEventListener('click', el => el.target.classList.toggle('hello'))
 

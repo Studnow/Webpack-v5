@@ -7,7 +7,7 @@ module.exports = merge(common, {
   devServer: {
     contentBase: "./dist",
     publicPath: '/',
-    hot: true,
+    // hot: true,   // for js HMR, for html/pug off HMR
   },
   module: {
     rules: [
