@@ -1,8 +1,10 @@
-// import _ from 'lodash';
+import _ from 'lodash';
 import './main.sass'
 // import "./style.css";
-import Logo from "./component/iamp-logo.svg";
-import printMe from "./print";
+import Logo from "./components/iamp-logo.svg";
+// import printMe from "./component/print";
+import './components/button/button';
+import button from './components/button/button';
 
 const component = () => {
   const element = document.createElement("div");
@@ -18,7 +20,14 @@ const component = () => {
   element.appendChild(myLogo);
 
   btn.innerHTML = "Click me and check the console!";
-  btn.onclick = printMe;
+  btn.onclick = () => console.log('buttononclick');
+
+  /* Lazy load and split chunk */
+  // btn.onclick = e => import(/* webpackChunkName: 'print' */ './components/print').then(module => {
+  //   const print = module.default;
+  //   print();
+  // })
+  /* LL end */
 
   element.appendChild(btn);
 
@@ -27,10 +36,5 @@ const component = () => {
 
 document.body.appendChild(component());
 
-if (module.hot) {
-  module.hot.accept("./print.js", function () {
-    console.log("Accepting the updated printMe module!");
-    printMe();
-  });
-}
+button()
 
