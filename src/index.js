@@ -5,6 +5,7 @@ import Logo from "./components/iamp-logo.svg";
 // import printMe from "./component/print";
 import './components/button/button';
 import button from './components/button/button';
+import Vue from 'vue';
 
 const component = () => {
   const element = document.createElement("div");
@@ -38,3 +39,15 @@ document.body.appendChild(component());
 
 button()
 
+window.Vue = require('vue')
+
+Vue.component('example-component', require('./components/Example.vue').default)
+Vue.component("aside-component", require("./components/aside.vue").default);
+
+const app = new Vue({
+  el: '#app'
+})
+
+// const aside = new Vue({
+//   el: '#aside'
+// })
