@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { VueLoaderPlugin } = require('vue-loader')
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const PATHS = {
@@ -18,6 +19,7 @@ module.exports = {
   entry: {
     app: PATHS.src,
   },
+
   output: {
     filename: `${PATHS.assets}js/[name].[contenthash].js`,
     path: PATHS.dist,
@@ -57,10 +59,21 @@ module.exports = {
         },
       },
       {
+        test: /\.vue$/i,
+        loader: "vue-loader",
+        options: {
+          loader: {
+            loader: {
+              sass: "vue-style-loader!css-loader!style-loader",
+            },
+          },
+        },
+      },
+      {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: `${PATHS.assets}/img/[name][hash][ext]`,
+          filename: `${PATHS.assets}img/[name][hash][ext]`,
         },
       },
       {
@@ -72,6 +85,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.js'
+    }
+  },
   plugins: [
     ...PAGES.map(
       (page) =>
@@ -80,5 +98,6 @@ module.exports = {
           filename: `./${page.replace(/\.pug/, ".html")}`, // Для html без pug оставить просто ${page}
         })
     ),
+    new VueLoaderPlugin(),
   ],
 };
