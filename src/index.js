@@ -51,3 +51,4 @@ const app = new Vue({
 // const aside = new Vue({
 //   el: '#aside'
 // })
+import "./styles/main.sass";

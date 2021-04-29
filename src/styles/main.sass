@@ -1,0 +1,32 @@
+// @import './style.css'
+@import "~bootstrap/scss/bootstrap-grid"
+@import './_custom'
+
+@font-face
+  font-family: 'Amarante'
+  src: url('../fonts/amarante-v7-latin-regular.woff') format('woff'), url('../fonts/amarante-v7-latin-regular.eot') format('eot')
+  font-weight: 600
+  font-style: normal
+
+.hello
+  color: $secondary
+  border-color: powderblue
+  border-style: solid
+  border-width: 2px
+  height: 16rem
+  font-family: 'Amarante'
+  background-image: url('../components/iamp-logo.svg')
+  background-repeat: no-repeat
+
+$body-color: lightcyan
+
+body
+  background-color: $body-color
+  background-image: url(../components/iamp-logo.svg)
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  margin: auto
+  display: flex
+
+.col
+  font-size: 1.5rem
