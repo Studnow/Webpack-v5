@@ -84,28 +84,19 @@ module.exports = {
       },
     ],
   },
-<<<<<<< HEAD
-=======
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.js'
     }
   },
->>>>>>> 0145f00... added vue/vue-style/template compiler
   plugins: [
     ...PAGES.map(
       (page) =>
         new HtmlWebpackPlugin({
           template: `${PAGES_DIR}/${page}`,
-<<<<<<< HEAD
           filename: `./${page.replace(/\.pug/, ".html")}`, // Для html без pug оставить просто ${page}
         })
     ),
-=======
-          filename: `./${page}`,
-        })
-    ),
     new VueLoaderPlugin(),
->>>>>>> 0145f00... added vue/vue-style/template compiler
   ],
 };
