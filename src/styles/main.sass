@@ -1,12 +1,11 @@
 // @import './style.css'
 @import "~bootstrap/scss/bootstrap-grid"
 @import './_custom'
+@import '../pages/templates/template'
+@import './_vars'
 
-/** @font-face
-  font-family: 'Amarante'
-  src: url('../fonts/amarante-v7-latin-regular.woff') format('woff'), url('../fonts/amarante-v7-latin-regular.eot') format('eot')
-  font-weight: 600
-  font-style: normal **/
+html
+  font-size: 16px
 
 .hello
   color: $secondary
@@ -18,16 +17,12 @@
   background-image: url('../components/iamp-logo.svg')
   background-repeat: no-repeat
 
-$body-color: lightcyan
-
-body
-  background-color: $body-color
-  background-image: url(../components/iamp-logo.svg)
-  background-repeat: no-repeat
-  background-position: 50% 50%
-  margin: auto
+#app
+  font-family: $primary-font
+  font-weight: normal
+  min-height: 100vh
   display: flex
-  font-family: 'Amarante'
-
-.col
-  font-size: 1.5rem
+  flex-direction: column
+  justify-content: space-between
+  #content
+    flex: 1 1 auto

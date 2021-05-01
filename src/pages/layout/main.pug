@@ -6,8 +6,12 @@ html(lang=ru)
     title= pageTitle
     meta(name="description", content=description)
   body(class= pageClass)
-    .wrapper
-      #app
-        .content-wrapper
+    #app
+      header
+        block header
+      #content.container-fluid
+        .content-wrapper.row.d-flex.justify-content-center.align-content-between
           block content
-          
+          block aside
+      footer
+        block footer

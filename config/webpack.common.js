@@ -45,7 +45,7 @@ module.exports = {
     rules: [
       {
         test: /\.pug$/i,
-        use: ["pug-loader"],
+        use: ["pug-loader"], // 'pug-plain-loader'
       },
       {
         test: /\.m?js$/,
@@ -87,8 +87,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.js'
-    }
+      vue$: "vue/dist/vue.js",
+    },
   },
   plugins: [
     ...PAGES.map(
