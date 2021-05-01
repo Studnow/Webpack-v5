@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <p>Aside component <em>{{p}}</em></p>
+    <img src="./iamp-logo.svg" alt="">
   </div>
 </template>
 
