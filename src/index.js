@@ -2,7 +2,7 @@ import _ from 'lodash';
 import './main.sass'
 // import "./style.css";
 import Logo from "./components/iamp-logo.svg";
-// import printMe from "./component/print";
+import printMe from "./components/print";
 import './components/button/button';
 import button from './components/button/button';
 // import pug from './templates/template';
@@ -24,10 +24,10 @@ const component = () => {
   btn.onclick = () => console.log('buttonOnclick');
 
   /* Lazy load and split chunk */
-  // btn.onclick = e => import(/* webpackChunkName: 'print' */ './components/print').then(module => {
-  //   const print = module.default;
-  //   print();
-  // })
+  btn.onclick = e => import(/* webpackChunkName: 'print' */ './components/print').then(module => {
+    const print = module.default;
+    print();
+  })
   /* LL end */
 
   element.appendChild(btn);
