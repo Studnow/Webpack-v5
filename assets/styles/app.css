@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Amarante';
+  src: url(/assets/fonts/amarante-v7-latin-regular37ff0d79807d50894598.woff) format('woff'),
+      url(/assets/fonts/amarante-v7-latin-regular58725e30d038170e8b5f.eot) format('eot');
+  font-weight: 600;
+  font-style: normal;
+}
+
+.hello {
+  color: greenyellow;
+  border-color: powderblue;
+  border-style: solid;
+  border-width: 2px;
+  height: 16rem;
+  font-family: 'Amarante';
+  background-image: url(/assets//img/iamp-logo16cd7c31da7110ad615e.svg);
+  background-repeat: no-repeat;
+}
+body{background-color:#ffffe0;background-image:url(/assets//img/iamp-logo16cd7c31da7110ad615e.svg);background-repeat:no-repeat;background-position:50% 50%;margin:auto}
