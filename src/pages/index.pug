@@ -1,4 +1,5 @@
 extends ./layout/main
+include ./utils/mix
 
 block variables
 
@@ -6,11 +7,15 @@ block variables
   - var description = "Description for Webpack + Pug"
   - var pageClass = "my-app"
 
+block header
+  include ./templates/includes/headers/header
+
 block content
 
   div
-    template#some-text
-      slot(name="gsom") Пыщь Пыщь Ололо
-      my-block пич
+    span Пыщь Пыщь Ололо
+    button Push
 
   include ./templates/template
+
+block footer

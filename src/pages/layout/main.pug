@@ -1,13 +1,17 @@
 block variables
 
 doctype html
-html(lang=ru)
+html(lang='ru')
   head
     title= pageTitle
     meta(name="description", content=description)
   body(class= pageClass)
-    .wrapper
-      #app
-        .content-wrapper
-          block content
-          
+    #app
+      header#header.app-header
+        block header
+      main#main.app-content
+        block content
+          block varContent
+        block aside
+      footer#footer.app-footer
+        block footer
