@@ -6,14 +6,31 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
-    publicPath: '/',
+    publicPath: "/",
     // hot: true,   // for js HMR, for html/pug off HMR
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: {
+                  tailwindcss: {},
+                  "postcss-preset-env": {
+                    browsers: "last 2 versions",
+                  },
+                  autoprefixer: {},
+                },
+              },
+            },
+          },
+        ],
       },
       // {
       //   test: /\.s[ac]ss$/i,
@@ -25,13 +42,13 @@ module.exports = merge(common, {
       //         sourceMap: true,
       //       },
       //     },
-          // "postcss-loader",
-          // {
-          //   loader: "sass-loader",
-          //   options: {
-          //     sourceMap: true,
-          //   },
-          // },
+      // "postcss-loader",
+      // {
+      //   loader: "sass-loader",
+      //   options: {
+      //     sourceMap: true,
+      //   },
+      // },
       //   ],
       // },
     ],

@@ -20,7 +20,33 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: {
+                  tailwindcss: {
+                    purge: {
+                      enabled: true,
+                      content: [
+                        "./src/pages/**/*.pug",
+                        "./src/index.js",
+                        "./src/**/*.js",
+                      ],
+                    },
+                  },
+                  "postcss-preset-env": {
+                    browsers: "last 2 versions",
+                  },
+                  autoprefixer: {},
+                },
+              },
+            },
+          },
+        ],
       },
       // {
       //   test: /\.s[ac]ss$/i,
