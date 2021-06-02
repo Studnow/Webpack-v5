@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Raleway", sans-serif;
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "PlayfairDisplay", serif;
+  src: url(../fonts/PlayfairDisplay-Bold.ttf);
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  @apply font-text
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-header font-bold text-accent;
+  }
+  h1 {
+    @apply text-5xl
+  }
+
+  h2 {
+    @apply text-4xl
+  }
+
+  h3 {
+    @apply text-3xl
+  }
+
+  h4 {
+    @apply text-2xl
+  }
+
+  h5 {
+    @apply text-xl
+  }
+
+  h6 {
+    @apply text-lg
+  }
+}
+
+.nav-link {
+  @apply text-white hover:text-accent text-base font-normal;
+}
+
+.grid-footer-down {
+  @apply min-h-screen grid grid-rows-stretch;
+}
+.flex-footer-down {
+  @apply min-h-screen flex flex-col;
+}

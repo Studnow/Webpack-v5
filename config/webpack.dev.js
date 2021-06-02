@@ -23,7 +23,7 @@ module.exports = merge(common, {
                 plugins: {
                   tailwindcss: {},
                   "postcss-preset-env": {
-                    browsers: "last 2 versions",
+                    browsers: "> .5%, last 2 versions",
                   },
                   autoprefixer: {},
                 },

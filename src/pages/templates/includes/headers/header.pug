@@ -1,7 +1,8 @@
 block header
-  .container.bg-blue-500.py-8.px-8.max-w-sm.mx-auto.bg-white.rounded-xl.shadow-md.space-y-2.text-white
+  .container.p-3.w-100.mx-auto.flex.justify-around.items-center
     block brand
-      include ./includes/brands/brand
+      include ../brands/brand
     block nav
-      include ./includes/navs/nav-menu
+      include ../nav-bars/nav-menu
     block utils
+      +iconButton('menu w-12 h-12 md:hidden', 'menu_icon w-10 h-10 fill-current .text-white hover:text-accent', '#hamburger', {name: 'menu'}, {'aria-label': 'menu-toggler'}, {id: 'menuToggler'})

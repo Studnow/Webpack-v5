@@ -5,7 +5,18 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    colors: {
+      accent: "#D4C17F",
+      dark: "#242B33",
+      white: "#fff",
+      input: "#ffffff33",
+    },
+    extend: {
+      fontFamily: { text: ["Raleway-Regular"], header: ["PlayfairDisplay"] },
+      gridTemplateRows: {
+        stretch: "auto 1fr auto",
+      },
+    },
   },
   variants: {
     extend: {},

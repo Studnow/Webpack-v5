@@ -1,21 +1,19 @@
 extends ./layout/main
 include ./utils/mix
 
+
 block variables
 
   - var pageTitle = "Webpack + Pug";
   - var description = "Description for Webpack + Pug"
   - var pageClass = "my-app"
+  - var brandImg = require('path')
 
 block header
   include ./templates/includes/headers/header
 
 block content
-
-  div
-    span Пыщь Пыщь Ололо
-    button Push
-
   include ./templates/template
 
 block footer
+  include ./templates/includes/footers/footer

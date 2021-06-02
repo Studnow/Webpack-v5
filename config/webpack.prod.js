@@ -39,7 +39,7 @@ module.exports = merge(common, {
                     },
                   },
                   "postcss-preset-env": {
-                    browsers: "last 2 versions",
+                    browsers: "> .5%, last 2 versions",
                   },
                   autoprefixer: {},
                 },

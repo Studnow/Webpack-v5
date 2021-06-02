@@ -4,9 +4,11 @@ doctype html
 html(lang='ru')
   head
     title= pageTitle
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
     meta(name="description", content=description)
+    include ../templates/includes/util-includes/svg-sprite-icons
   body(class= pageClass)
-    #app
+    #app.grid-footer-down.bg-dark.text-white
       header#header.app-header
         block header
       main#main.app-content

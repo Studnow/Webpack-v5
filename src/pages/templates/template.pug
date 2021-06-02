@@ -1,26 +1,7 @@
 block content
-  .container
-    .row
-      article.col-4.col-12-sm.border-solid.border-4(class="border-blue-500")
-        header.text-center.space-y-2(class="sm:text-left bg-green-300")
-          h1 Pug - node template engine
-        section(class="bg-yellow-200")
-          p.
-            Pug is a terse and simple templating language with a
-            strong focus on performance and powerful features.
-        footer.bg-blue-400(class="bg-red-500")
-          time(datetime="2021-05-31 0:05") 31 мая
-      article.col-4.col-12-sm.border-solid.border-4.border-gray-800.bg-yellow-500
-        h2 Pug - node template engine
-        section.text-white
-          h3 Template section
-          p.
-            Pug is a terse and simple templating language with a
-            strong focus on performance and powerful features.
-      article.col-4.col-12-sm.bg-yellow-900.text-white
-        h2 Pug - node template engine
-        section
-          h3 Template section
-          p.
-            Pug is a terse and simple templating language with a
-            strong focus on performance and powerful features.
+  .block.block-first
+    include ./includes/content-sections/first.pug
+  .block.block-second
+    include ./includes/content-sections/second.pug
+  .block.block-third
+    include ./includes/content-sections/third.pug

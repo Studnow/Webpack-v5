@@ -55,7 +55,7 @@ mixin card_top-img(cardClass)
       span.customer-company-position.px-3 Основатель
 
 mixin iconButton(buttonClassName, iconClassName, iconId, ...attr)
-  button(class=buttonClassName)&attributes(attr)
+  button(class=buttonClassName)&attributes(...attr)
     svg(class=iconClassName)
       use(xlink:href=iconId)
 
