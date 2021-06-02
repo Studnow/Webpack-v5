@@ -1,7 +1,11 @@
 module.exports = {
   purge: {
-    // enabled: true,
-    content: ["./src/pages/**/*.pug", "./src/index.js", "./src/**/*.js"],
+    enabled: false, // for prod enabled: true, dev - enabled: false
+    content: [
+      "./src/pages/templates/**/**/*.pug",
+      "./src/index.js",
+      "./src/**/*.js",
+    ],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
