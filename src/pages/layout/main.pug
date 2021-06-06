@@ -13,7 +13,8 @@ html(lang='ru')
         block header
       main#main.app-content.overflow-hidden
         block content
-          block varContent
         block aside
       footer#footer.app-footer
         block footer
+      include ../templates/includes/content-sections/gallery-modals
+      //- #modal-overlay.overlay(aria-label="Close modal" tabindex="-1" data-modal-close)

@@ -100,3 +100,21 @@ html {
 .gallery-figcaption {
   @apply self-start bottom-16 pl-8 min-w-max absolute text-3xl cursor-pointer;
 }
+
+.overlay {
+  @apply fixed top-0 left-0 w-full h-full overflow-auto bg-opacity-75 bg-dark;
+}
+/* .overlay.is-open {
+  @apply block;
+} */
+
+.modal {
+  @apply hidden;
+}
+.modal.is-open {
+  @apply block;
+}
+
+.dialog {
+  @apply transform translate-x-1/2 translate-y-1/2 scale-100 w-1/2 h-1/2 transition-all delay-1000 duration-1000 bg-white bg-opacity-10;
+}

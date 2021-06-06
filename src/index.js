@@ -6,3 +6,4 @@ import './styles/component-style.css'
 // js
 
 import './js/menu-toggler'
+import './js/modal'
