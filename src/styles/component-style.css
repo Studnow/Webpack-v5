@@ -1,3 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
 @font-face {
   font-family: "Raleway", sans-serif;
   src: url(../fonts/Raleway-Regular.ttf);
@@ -11,9 +15,7 @@ html {
   font-size: 16px;
 }
 
-
 @layer base {
-
   body {
     @apply font-text;
   }
@@ -24,33 +26,40 @@ html {
   h4,
   h5,
   h6 {
-    @apply font-header font-bold text-accent;
+    @apply font-header font-bold text-accent cursor-default;
   }
   h1 {
-    @apply text-5xl
+    @apply text-4xl sm:text-5xl;
   }
 
   h2 {
-    @apply text-4xl
+    @apply text-4xl;
   }
 
   h3 {
-    @apply text-3xl
+    @apply text-3xl;
   }
 
   h4 {
-    @apply text-2xl
+    @apply text-2xl;
   }
 
   h5 {
-    @apply text-xl
+    @apply text-xl;
   }
 
   h6 {
-    @apply text-lg
+    @apply text-lg;
+  }
+
+  a {
+    @apply hover:text-accent;
+  }
+
+  button {
+    @apply hover:opacity-80
   }
 }
-
 .nav-link {
   @apply text-white hover:text-accent text-base font-normal;
 }
@@ -60,4 +69,34 @@ html {
 }
 .flex-footer-down {
   @apply min-h-screen flex flex-col;
+}
+
+.svg-white {
+  @apply fill-current text-white hover:text-accent;
+}
+.svg-accent {
+  @apply fill-current text-accent hover:text-white;
+}
+
+.flex-col-centered {
+  @apply flex flex-col items-center justify-center;
+}
+.flex-centered {
+  @apply flex items-center justify-center;
+}
+.block {
+  @apply w-full mb-12 p-4;
+}
+.block-1_promo {
+  @apply bg-first bg-cover min-h-screen bg-no-repeat bg-top mb-24;
+}
+.block-4_description {
+  @apply flex flex-col xl:flex-row items-center justify-center gap-8 min-h-50vh bg-watch;
+}
+.block-5_video {
+  @apply min-h-50vh flex-centered;
+}
+
+.gallery-figcaption {
+  @apply self-start bottom-16 pl-8 min-w-max absolute text-3xl cursor-pointer;
 }

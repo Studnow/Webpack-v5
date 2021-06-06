@@ -59,10 +59,10 @@ module.exports = merge(common, {
             options: {
               postcssOptions: {
                 plugins: {
-                  tailwindcss: {},
                   "postcss-preset-env": {
                     browsers: "> .5%, last 2 versions",
                   },
+                  tailwindcss: {},
                   autoprefixer: {},
                 },
               },

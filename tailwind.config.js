@@ -2,7 +2,7 @@ module.exports = {
   purge: {
     enabled: false, // for prod enabled: true, dev - enabled: false
     content: [
-      "./src/pages/templates/**/**/*.pug",
+      "./src/pages/**/**/*.pug",
       "./src/index.js",
       "./src/**/*.js",
     ],
@@ -19,6 +19,25 @@ module.exports = {
       fontFamily: { text: ["Raleway-Regular"], header: ["PlayfairDisplay"] },
       gridTemplateRows: {
         stretch: "auto 1fr auto",
+      },
+      backgroundImage: (theme) => ({
+        first:
+          "url('/src/pages/templates/includes/content-sections/img/1_promo/1_promo.png')",
+        watch:
+          "url('/src/pages/templates/includes/content-sections/img/4_description/watch-bg.png')",
+      }),
+      minHeight: {
+        "0vh": "0vh",
+        "25vh": "25vh",
+        "50vh": "50vh",
+        "75vh": "75vh",
+      },
+      minWidth: {
+        "0vw": "0vw",
+        "25vw": "25vw",
+        "50vw": "50vw",
+        "75vw": "75vw",
+        "320" : "18rem"
       },
     },
   },

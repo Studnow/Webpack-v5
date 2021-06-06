@@ -8,10 +8,10 @@ html(lang='ru')
     meta(name="description", content=description)
     include ../templates/includes/util-includes/svg-sprite-icons
   body(class= pageClass)
-    #app.grid-footer-down.bg-dark.text-white
+    #app.grid-footer-down.bg-dark.text-white.dark
       header#header.app-header
         block header
-      main#main.app-content
+      main#main.app-content.overflow-hidden
         block content
           block varContent
         block aside
