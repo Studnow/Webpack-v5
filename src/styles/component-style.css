@@ -88,7 +88,7 @@ html {
   @apply w-full mb-12 p-4;
 }
 .block-1_promo {
-  @apply bg-first bg-cover min-h-screen bg-no-repeat bg-top mb-24;
+  @apply bg-first bg-top-6 bg-cover min-h-75vh bg-no-repeat;
 }
 .block-4_description {
   @apply flex flex-col xl:flex-row items-center justify-center gap-8 min-h-50vh bg-watch;
@@ -117,4 +117,11 @@ html {
 
 .dialog {
   @apply transform translate-x-1/2 translate-y-1/2 scale-100 w-1/2 h-1/2 transition-all delay-1000 duration-1000 bg-white bg-opacity-10;
+}
+.app-footer .nav-list {
+  @apply flex-col gap-3
+}
+
+.social {
+  @apply w-8 h-6 fill-current text-white hover:text-accent
 }

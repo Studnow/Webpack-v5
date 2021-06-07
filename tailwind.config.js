@@ -12,11 +12,12 @@ module.exports = {
     colors: {
       accent: "#D4C17F",
       dark: "#242B33",
+      foot: "#2D343C",
       white: "#fff",
       input: "#ffffff33",
     },
     extend: {
-      fontFamily: { text: ["Raleway-Regular"], header: ["PlayfairDisplay"] },
+      fontFamily: { text: ["Raleway, sans-serif"], header: ["PlayfairDisplay"] },
       gridTemplateRows: {
         stretch: "auto 1fr auto",
       },
@@ -26,6 +27,9 @@ module.exports = {
         watch:
           "url('/src/pages/templates/includes/content-sections/img/4_description/watch-bg.png')",
       }),
+      backgroundPosition: {
+        'top-6': 'center top -6rem'
+      },
       minHeight: {
         "0vh": "0vh",
         "25vh": "25vh",
