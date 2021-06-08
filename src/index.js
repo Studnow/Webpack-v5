@@ -7,3 +7,4 @@ import './styles/component-style.css'
 
 import './js/menu-toggler'
 import './js/modal'
+import './js/video'

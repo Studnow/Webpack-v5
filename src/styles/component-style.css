@@ -125,3 +125,8 @@ html {
 .social {
   @apply w-8 h-6 fill-current text-white hover:text-accent
 }
+
+progress[data-state="fake"] {
+   background:#e6e6e6;
+   height:65%;
+}
