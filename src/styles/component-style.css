@@ -53,13 +53,18 @@ html {
   }
 
   a {
-    @apply hover:text-accent;
+    @apply hover:text-accent focus:outline-none focus:text-accent;
   }
 
   button {
-    @apply hover:opacity-80
+    @apply hover:opacity-80 focus:outline-white;
   }
+  input {
+    @apply focus:outline-accent
+  }
+
 }
+
 .nav-link {
   @apply text-white hover:text-accent text-base font-normal;
 }
@@ -69,13 +74,6 @@ html {
 }
 .flex-footer-down {
   @apply min-h-screen flex flex-col;
-}
-
-.svg-white {
-  @apply fill-current text-white hover:text-accent;
-}
-.svg-accent {
-  @apply fill-current text-accent hover:text-white;
 }
 
 .flex-col-centered {
@@ -123,7 +121,7 @@ html {
 }
 
 .social {
-  @apply w-8 h-6 fill-current text-white hover:text-accent
+  @apply w-8 h-6 fill-current
 }
 
 progress[data-state="fake"] {

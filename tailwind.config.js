@@ -1,11 +1,7 @@
 module.exports = {
   purge: {
     enabled: false, // for prod enabled: true, dev - enabled: false
-    content: [
-      "./src/pages/**/**/*.pug",
-      "./src/index.js",
-      "./src/**/*.js",
-    ],
+    content: ["./src/pages/**/**/*.pug", "./src/index.js", "./src/**/*.js"],
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -16,10 +12,20 @@ module.exports = {
       white: "#fff",
       input: "#ffffff33",
     },
+    // outline: {
+    //   accent: ['2px dotted accent', '3px']
+    // },
     extend: {
-      fontFamily: { text: ["Raleway, sans-serif"], header: ["PlayfairDisplay"] },
+      fontFamily: {
+        text: ["Raleway, sans-serif"],
+        header: ["PlayfairDisplay"],
+      },
       gridTemplateRows: {
         stretch: "auto 1fr auto",
+      },
+      outline: {
+        accent: ["1px solid #D4C17F", "2px"],
+        white: ["1px solid #fff", "2px"],
       },
       backgroundImage: (theme) => ({
         first:
@@ -28,7 +34,7 @@ module.exports = {
           "url('/src/pages/templates/includes/content-sections/img/4_description/watch-bg.png')",
       }),
       backgroundPosition: {
-        'top-6': 'center top -6rem'
+        "top-6": "center top -6rem",
       },
       minHeight: {
         "0vh": "0vh",
@@ -41,7 +47,7 @@ module.exports = {
         "25vw": "25vw",
         "50vw": "50vw",
         "75vw": "75vw",
-        "320" : "18rem"
+        320: "18rem",
       },
     },
   },

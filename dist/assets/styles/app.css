@@ -704,6 +704,14 @@ button:hover {
   height: 4rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
+.h-px {
+  height: 1px;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -757,6 +765,10 @@ button:hover {
 
 .mb-28 {
   margin-bottom: 7rem;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
 }
 
 .min-h-25vh {
@@ -837,16 +849,16 @@ button:hover {
   padding-top: 10rem;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
 
 .relative {
   position: relative;
+}
+
+.bottom-0 {
+  bottom: 0px;
 }
 
 .top-8 {
@@ -897,6 +909,10 @@ button:hover {
   font-style: normal;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -907,6 +923,10 @@ button:hover {
 
 .w-20 {
   width: 5rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .w-28 {
@@ -1263,6 +1283,11 @@ html {
 
 .social {
   width: 2rem;
+}
+
+progress[data-state="fake"] {
+  background:#e6e6e6;
+  height:65%;
 }
 
 @media (min-width: 640px) {
