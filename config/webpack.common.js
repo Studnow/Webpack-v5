@@ -72,6 +72,11 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      src: PATHS.src,
+    },
+  },
   plugins: [
     ...PAGES.map(
       (page) =>
