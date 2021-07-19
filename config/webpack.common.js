@@ -60,7 +60,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
         generator: {
-          filename: `${PATHS.assets}/img/[name][hash][ext]`,
+          filename: `${PATHS.assets}img/[name][hash][ext]`,
         },
       },
       {
@@ -80,10 +80,10 @@ module.exports = {
   plugins: [
     ...PAGES.map(
       (page) =>
-        new HtmlWebpackPlugin({
-          template: `${PAGES_DIR}/${page}`,
-          filename: `./${page.replace(/\.pug/, ".html")}`, // Для html без pug оставить просто ${page}
-        })
-    ),
-  ],
-};
+      new HtmlWebpackPlugin({
+        template: `${PAGES_DIR}/${page}`,
+        filename: `./${page.replace(/\.pug/, ".html")}`, // Для html без pug оставить просто ${page}
+      })
+      ),
+    ],
+  };

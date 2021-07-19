@@ -3,11 +3,12 @@ const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
   mode: "development",
+  target: 'web',
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
     publicPath: '/',
-    hot: true,   // for js HMR, for html/pug off HMR
+    // hot: true,   // for js HMR, for html/pug off HMR
   },
   module: {
     rules: [
