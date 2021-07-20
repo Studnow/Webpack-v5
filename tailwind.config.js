@@ -28,7 +28,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        "brand-img": 'url("src/img/brand.svg")',
+        "brand-img": 'url("/src/img/brand.svg")',
       }),
     },
   },

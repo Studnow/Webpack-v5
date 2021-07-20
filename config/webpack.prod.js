@@ -11,6 +11,8 @@ const PATHS = {
   assets: "assets/",
 };
 
+// to deploy GH-pages publicPath should be started from project name
+
 module.exports = merge(common, {
   mode: "production",
   output: {
