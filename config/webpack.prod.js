@@ -13,6 +13,9 @@ const PATHS = {
 
 module.exports = merge(common, {
   mode: "production",
+  output: {
+    publicPath: "/Webpack-v5",
+  },
   module: {
     rules: [
       {
@@ -71,7 +74,7 @@ module.exports = merge(common, {
       deleteOriginalAssets: false,
       filename: `${PATHS.assets}img/webp/[name].webp`,
       minimizerOptions: {
-        plugins: [["imagemin-webp", { quality: 50}]],
+        plugins: [["imagemin-webp", { quality: 50 }]],
       },
     }),
     // new ImageMinimizerPlugin({

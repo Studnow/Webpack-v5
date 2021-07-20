@@ -810,7 +810,7 @@ a {
 	border-width: 1px;
 }
 .bg-brand-img{
-	background-image: url(/assets/img/origin/brand.svg);
+	background-image: url(/Webpack-v5assets/img/origin/brand.svg);
 }
 .bg-contain{
 	background-size: contain;
