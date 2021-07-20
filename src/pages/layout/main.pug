@@ -5,6 +5,9 @@ html(lang='ru')
   head
     title= pageTitle
     meta(name="description", content=description)
+    meta(name="theme-color" content="#ffffff")
+    link(rel="icon" href=require("../../public/favicon.svg"))
+    link(rel="shortcut icon" href=require("../../public/favicon.ico") type="image/x-icon")
   body(class= pageClass)
     #app
       header#header.app-header
