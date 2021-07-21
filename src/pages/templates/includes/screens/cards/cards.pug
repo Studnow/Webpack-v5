@@ -1,18 +1,19 @@
 .container.mb-16.mx-auto.grid.grid-cols-2.grid-rows-2.items-center.justify-center.gap-8
-  article.prose-lg.col-span-2.flex.flex-col.items-center
+  article.prose-lg.col-span-2.flex.flex-col.items-center.justify-center.h-full.bg-screen-img.bg-no-repeat.bg-center.bg-contain
     header
-      h1 Pug - node template engine
+      h1.sm_text-white Pug - node template engine
     section
-      img(src=require("/src/img/first-bg.png"), alt="")
-      p.
+      p.text-white.
         Pug is a terse and simple templating language with a
         strong focus on performance and powerful features.
-    footer
+    footer.text-white
       time(datetime="2021-05-31 0:05") 31 мая
   article.col-4.col-12-sm.prose-lg
     section.flex.flex-col.items-center.max-w-sm.mx-auto.shadow-md
       h2.text-center Pug - node template engine
-      img(src=require("/src/img/left.jpg"), alt="")
+      picture
+        source(type="image/webp" srcset=require("/src/img/webp/left.webp"))
+        img(src=require("/src/img/left.jpg"), alt="")
       .descr.px-4
         h3 Template section
         p.
@@ -21,9 +22,14 @@
   article.col-4.col-12-sm.prose-lg
     section.flex.flex-col.items-center.max-w-sm.mx-auto.shadow-md
       h2.text-center Pug - node template engine
-      img(src=require("/src/img/right.jpg"), alt="")
+      picture
+        source(type="image/webp" srcset=require("/src/img/webp/right.webp"))
+        img(src=require("/src/img/right.jpg"), alt="")
+        //- srcset="/src/img/webp/right.webp", "/src/img/webp/left.webp", "/src/img/webp/first-bg.webp"
       .descr.px-4
         h3 Template section
         p.
           Pug is a terse and simple templating language with a
           strong focus on performance and powerful features.
+
+// img srcset for webp

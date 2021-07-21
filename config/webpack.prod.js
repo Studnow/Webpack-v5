@@ -11,12 +11,12 @@ const PATHS = {
   assets: "assets/",
 };
 
-// to deploy GH-pages publicPath should be started from project name
+// to deploy GH-pages publicPath should be started from project name, live reload path = './'
 
 module.exports = merge(common, {
   mode: "production",
   output: {
-    publicPath: "/Webpack-v5",
+    publicPath: "./",
   },
   module: {
     rules: [

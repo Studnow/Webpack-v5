@@ -2,7 +2,7 @@ const { colors } = require('tailwindcss/defaulttheme');
 const myColors = require('tailwindcss/colors');
 
 module.exports = {
-  mode: 'jit',
+  mode: "jit",
   purge: {
     enabled: true,
     content: [
@@ -16,11 +16,12 @@ module.exports = {
       "./src/**/*.sass",
     ],
   },
-  separator: '_',
+  separator: "_",
   theme: {
     colors: {
       yellow: myColors.yellow,
-      red: myColors.red
+      red: myColors.red,
+      white: myColors.white,
     },
     fontFamily: {
       sans: ["Amarante", "sans-serif"],
@@ -28,7 +29,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        "brand-img": 'url("/src/img/brand.svg")',
+        "screen-img": 'url("/src/img/webp/first-bg.webp")',
       }),
     },
   },
