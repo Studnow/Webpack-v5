@@ -1,0 +1,18 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+@import url(./vars.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  #app {
+    @apply min-h-screen grid grid-flow-col grid-rows-[auto,1fr,auto];
+  }
+  a {
+    @apply text-yellow-600 hover_text-yellow-400 active_text-red-600;
+    /* background-color: var(--my-shadow); */
+  }
+}
+

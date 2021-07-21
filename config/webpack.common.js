@@ -1,8 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { VueLoaderPlugin } = require('vue-loader')
-// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const PATHS = {
   src: path.join(__dirname, "../src"),
@@ -59,21 +57,10 @@ module.exports = {
         },
       },
       {
-        test: /\.vue$/i,
-        loader: "vue-loader",
-        options: {
-          loader: {
-            loader: {
-              sass: "vue-style-loader!css-loader!style-loader",
-            },
-          },
-        },
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico|webp)$/i,
         type: "asset/resource",
         generator: {
-          filename: `${PATHS.assets}img/[name][hash][ext]`,
+          filename: `${PATHS.assets}img/origin/[name][ext]`,
         },
       },
       {
@@ -87,7 +74,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      vue$: "vue/dist/vue.js",
+      src: PATHS.src,
     },
   },
   plugins: [

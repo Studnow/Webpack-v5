@@ -1,17 +1,21 @@
 block variables
 
 doctype html
-html(lang=ru)
+html(lang='ru')
   head
     title= pageTitle
+    meta(name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86")
     meta(name="description", content=description)
+    meta(name="theme-color" content="#ffffff")
+    link(rel="icon" href=require("../../public/favicon.svg"))
+    link(rel="shortcut icon" href=require("../../public/favicon.ico") type="image/x-icon")
   body(class= pageClass)
     #app
-      header
+      header#header.app-header
         block header
-      #content.container-fluid
-        .content-wrapper.row.d-flex.justify-content-center.align-content-between
-          block content
-          block aside
-      footer
+      main#main.app-content
+        block content
+          block varContent
+        block aside
+      footer#footer.app-footer.p-4
         block footer
