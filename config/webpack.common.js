@@ -85,6 +85,5 @@ module.exports = {
           filename: `./${page.replace(/\.pug/, ".html")}`, // Для html без pug оставить просто ${page}
         })
     ),
-    new VueLoaderPlugin(),
   ],
 };
