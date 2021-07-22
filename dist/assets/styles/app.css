@@ -1,5 +1,6 @@
 :root {
   --my-shadow: whitesmoke;
+  --first-bg: url(/assets/img/origin/first-bg.webp)
 }
 /* @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -733,6 +734,9 @@ a {
 .col-span-2{
 	grid-column: span 2 / span 2;
 }
+.m-auto{
+	margin: auto;
+}
 .mx-auto{
 	margin-left: auto;
 	margin-right: auto;
@@ -761,6 +765,9 @@ a {
 .grid{
 	display: grid;
 }
+.hidden{
+	display: none;
+}
 .h-24{
 	height: 6rem;
 }
@@ -769,6 +776,9 @@ a {
 }
 .h-10{
 	height: 2.5rem;
+}
+.h-full{
+	height: 100%;
 }
 .min-h-screen{
 	min-height: 100vh;
@@ -809,8 +819,8 @@ a {
 .border{
 	border-width: 1px;
 }
-.bg-brand-img{
-	background-image: url(./assets/img/origin/brand.svg);
+.bg-screen-img{
+	background-image: url(/assets/img/origin/first-bg.jpg);
 }
 .bg-contain{
 	background-size: contain;
@@ -846,6 +856,10 @@ a {
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
 }
+.py-3{
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
 .px-4{
 	padding-left: 1rem;
 	padding-right: 1rem;
@@ -860,13 +874,27 @@ a {
 	--tw-text-opacity: 1;
 	color: rgba(202, 138, 4, var(--tw-text-opacity));
 }
+.text-white{
+	--tw-text-opacity: 1;
+	color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
 .shadow-md{
 	--tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+
+.first-screen {
+  /* background-image: url(/src/img/webp/first-bg.webp); */
+}
+
 .hover_text-yellow-400:hover{
 	--tw-text-opacity: 1;
 	color: rgba(250, 204, 21, var(--tw-text-opacity));
 }
 
-
+@media (min-width: 640px){
+	.sm_text-white{
+		--tw-text-opacity: 1;
+		color: rgba(255, 255, 255, var(--tw-text-opacity));
+	}
+}

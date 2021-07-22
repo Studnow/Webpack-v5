@@ -16,25 +16,34 @@ const PATHS = {
 module.exports = merge(common, {
   mode: "production",
   output: {
-    publicPath: "./",
+    publicPath: "/",
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              url: true,
+            },
+          },
           "postcss-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
         ],
       },
+      // {
+      //   test: /\.s[ac]ss$/i,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     // Translates CSS into CommonJS
+      //     "css-loader",
+      //     "postcss-loader",
+      //     // Compiles Sass to CSS
+      //     "sass-loader",
+      //   ],
+      // },
     ],
   },
   plugins: [

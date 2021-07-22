@@ -11,6 +11,9 @@ block header
   include ./templates/includes/headers/header
 
 block content
+  .content(x-data="dropdown")
+    button(@click="toggle") About data
+    p(x-show="open") Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam voluptatibus fugit minima ea ipsam soluta totam accusamus unde, delectus aspernatur ipsa, rerum numquam minus illo nisi nulla odio vitae asperiores!
 
 block footer
   include ./templates/includes/footers/footer

@@ -1,8 +1,8 @@
 .container.mb-16.mx-auto.grid.grid-cols-2.grid-rows-2.items-center.justify-center.gap-8
-  article.prose-lg.col-span-2.flex.flex-col.items-center.justify-center.h-full.bg-screen-img.bg-no-repeat.bg-center.bg-contain
-    header
+  article.first-screen.prose-lg.col-span-2.flex.flex-col.items-center.justify-center.h-full.bg-screen-img.bg-no-repeat.bg-center.bg-contain(x-data="dropdown")
+    header(@click="toggle")
       h1.sm_text-white Pug - node template engine
-    section
+    section(x-show="open")
       p.text-white.
         Pug is a terse and simple templating language with a
         strong focus on performance and powerful features.

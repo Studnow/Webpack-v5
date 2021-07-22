@@ -29,7 +29,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
-        "screen-img": 'url("/src/img/webp/first-bg.webp")',
+        "screen-img": 'url("/src/img/first-bg.jpg")',
       }),
     },
   },
