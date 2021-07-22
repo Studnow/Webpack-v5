@@ -17,5 +17,6 @@
 }
 
 .first-screen {
+  @apply min-h-screen;
   /* background-image: url(/src/img/webp/first-bg.webp); */
 }
