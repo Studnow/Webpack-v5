@@ -6,23 +6,24 @@ import "./styles/style.css";
 
 // js
 
-import Alpine from 'alpinejs'
+import Alpine from "alpinejs";
 import AOS from "aos";
-import 'aos/dist/aos.css'
+import "aos/dist/aos.css";
 
 // register Alpine extension code between import and start()
 
-window.Alpine = Alpine
+window.Alpine = Alpine;
 
-Alpine.data('dropdown', () => ({
+Alpine.data("dropdown", () => ({
   open: false,
 
   toggle() {
-    this.open = ! this.open
-  }
-}))
+    this.open = !this.open;
+  },
+}));
 
-Alpine.start()
+Alpine.start();
+
 AOS.init({
   duration: 1200,
 });

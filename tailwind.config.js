@@ -2,7 +2,6 @@ const { colors } = require('tailwindcss/defaulttheme');
 const myColors = require('tailwindcss/colors');
 
 module.exports = {
-  mode: "jit",
   purge: {
     enabled: true,
     content: [
@@ -16,12 +15,15 @@ module.exports = {
       "./src/**/*.sass",
     ],
   },
-  separator: "_",
+  // separator: "_",
   theme: {
     colors: {
       yellow: myColors.yellow,
       red: myColors.red,
       white: myColors.white,
+      black: myColors.black,
+      gray: myColors.gray,
+      green: myColors.green,
     },
     fontFamily: {
       sans: ["Amarante", "sans-serif"],
@@ -29,13 +31,16 @@ module.exports = {
     },
     extend: {
       backgroundImage: (theme) => ({
+        "screen-img-webp": 'url("/src/img/webp/first-bg.webp")',
         "screen-img": 'url("/src/img/first-bg.jpg")',
       }),
     },
   },
-  variants: {},
+  variants: {
+    textColor: ["active", "hover"],
+  },
   plugins: [
-    // require('@tailwindcss/forms'),
+    require('@tailwindcss/forms'),
     require("@tailwindcss/typography"),
   ],
 };

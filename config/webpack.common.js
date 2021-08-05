@@ -26,7 +26,8 @@ module.exports = {
   },
 
   optimization: {
-    usedExports: true,
+    runtimeChunk: 'single',
+    // usedExports: true,
     moduleIds: "deterministic",
     splitChunks: {
       cacheGroups: {
@@ -60,7 +61,7 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif|ico|webp)$/i,
         type: "asset/resource",
         generator: {
-          filename: `${PATHS.assets}img/origin/[name][ext]`,
+          filename: `${PATHS.assets}img/[name][ext]`,
         },
       },
       {

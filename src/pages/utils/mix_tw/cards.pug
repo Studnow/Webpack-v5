@@ -1,0 +1,10 @@
+mixin card
+  article.first-screen.flex.flex-col.items-center.justify-center.h-full.bg-screen-img-webp.bg-screen-img.bg-no-repeat.bg-center.bg-contain(x-data="dropdown")
+    header.prose-lg.cursor-pointer(@click="toggle")
+      h1.text-white Pug - node template engine
+    section(:class="open ? 'opacity-100 transition-opacity delay-100 duration-500' : 'opacity-0 transition-opacity delay-50 duration-500'")
+      p.text-white.
+        Pug is a terse and simple templating language with a
+        strong focus on performance and powerful features.
+    footer.text-white
+      time(datetime="2021-05-31 0:05") 31 мая

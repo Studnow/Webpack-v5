@@ -1,7 +1,19 @@
 block header
-  .container.grid.grid-cols-4.h-14.items-center.mx-auto
-    block brand
-      include ./brands/brand
-    block nav
-      include ../menu/horizontal/nav-menu
-    block utils
+  // This example requires Tailwind CSS v2.0+
+  nav.bg-gray-800
+    .max-w-7xl.mx-auto.px-2(class='sm:px-6 lg:px-8')
+      .relative.flex.items-center.justify-between.h-16
+        .absolute.inset-y-0.left-0.flex.items-center(class='sm:hidden')
+          // Mobile menu button
+          include ../util-includes/buttons/menu/burger
+        .flex-1.flex.items-center.justify-center(class='sm:items-stretch sm:justify-start')
+          include ./brands/brand
+          include ../menu/horizontal/nav-menu
+        .absolute.inset-y-0.right-0.flex.items-center.pr-2(class='sm:static sm:inset-auto sm:ml-6 sm:pr-0')
+          include ../util-includes/buttons/profile/notification
+          // Profile dropdown
+          .ml-3.relative
+            include ../util-includes/buttons/profile/avatar
+            include ../menu/vertical/dropdown
+    // Mobile menu, show/hide based on menu state.
+    include ../menu/vertical/mobile
