@@ -1,11 +1,10 @@
 block nav
-  nav.nav-menu(class="col-span-2")
-    ul.nav-list.flex.justify-evenly
-      li.nav-item
-        a(href="./").nav-link Home
-      li.nav-item
-        a(href="./about.html").nav-link About
-      li.nav-item
-        a(href="#!").nav-link Menu item
-      li.nav-item
-        a(href="#!").nav-link Menu item
+  .hidden(class='sm:block sm:ml-6')
+    .flex.space-x-4
+      // Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white"
+      a.bg-gray-900.text-white.px-3.py-2.rounded-md.text-sm.font-medium(href='#' aria-current='page') Dashboard
+      a.text-gray-300.px-3.py-2.rounded-md.text-sm.font-medium(href='#' class='hover:bg-gray-700 hover:text-white') Team
+      a.text-gray-300.px-3.py-2.rounded-md.text-sm.font-medium(href='#' class='hover:bg-gray-700 hover:text-white') Projects
+      a.text-gray-300.px-3.py-2.rounded-md.text-sm.font-medium(href='#' class='hover:bg-gray-700 hover:text-white') Calendar
+      a.text-gray-300.px-3.py-2.rounded-md.text-sm.font-medium(href='/about.html' class='hover:bg-gray-700 hover:text-white') About
+

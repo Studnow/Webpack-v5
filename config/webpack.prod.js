@@ -2,6 +2,7 @@ const path = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 const { extendDefaultPlugins } = require("svgo");
 
@@ -16,30 +17,48 @@ const PATHS = {
 module.exports = merge(common, {
   mode: "production",
   output: {
-    publicPath: "./",
+    publicPath: "/",
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          // Translates CSS into CommonJS
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              url: true,
+            },
+          },
           "postcss-loader",
-          // Compiles Sass to CSS
-          "sass-loader",
         ],
       },
+      // {
+      //   test: /\.s[ac]ss$/i,
+      //   use: [
+      //     MiniCssExtractPlugin.loader,
+      //     // Translates CSS into CommonJS
+      //     "css-loader",
+      //     "postcss-loader",
+      //     // Compiles Sass to CSS
+      //     "sass-loader",
+      //   ],
+      // },
     ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}styles/[name].css`,
+    }),
+    new CssMinimizerPlugin(),
+    new ImageMinimizerPlugin({
+      test: /\.(png|jpe?g|gif)$/i,
+      deleteOriginalAssets: false,
+      filename: `${PATHS.assets}img/webp/[name].webp`,
+      minimizerOptions: {
+        plugins: [["imagemin-webp", { quality: 50 }]],
+      },
     }),
     new ImageMinimizerPlugin({
       minimizerOptions: {
@@ -69,14 +88,6 @@ module.exports = merge(common, {
             },
           ],
         ],
-      },
-    }),
-    new ImageMinimizerPlugin({
-      test: /\.(png|jpe?g|gif)$/i,
-      deleteOriginalAssets: false,
-      filename: `${PATHS.assets}img/webp/[name].webp`,
-      minimizerOptions: {
-        plugins: [["imagemin-webp", { quality: 50 }]],
       },
     }),
     // new ImageMinimizerPlugin({

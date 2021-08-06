@@ -1,5 +1,4 @@
 extends ./layout/main
-include ./utils/mix
 
 block variables
 
@@ -11,6 +10,17 @@ block header
   include ./templates/includes/headers/header
 
 block content
+  .content.h-20(x-data="dropdown")
+    button(@click="toggle" class="active:text-red-400") About data
+    p(x-show="open" x-transition:enter="transition ease-out duration-1000" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave.duration.300ms) Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam voluptatibus fugit minima ea ipsam soluta totam accusamus unde, delectus aspernatur ipsa, rerum numquam minus illo nisi nulla odio vitae asperiores!
+  .container.mx-auto.min-h-screen
+    h1.text-center.text-2xl.bg-yellow-300(data-aos="fade") OLOLO
+    ul.list(x-data="{list: ['first', 'second', 'third']}")
+      template(x-for='item in list')
+        li.list-item(x-text='item')
+  .container.mx-auto.min-h-screen
+    include ./templates/includes/screens/tables/people
+
 
 block footer
   include ./templates/includes/footers/footer

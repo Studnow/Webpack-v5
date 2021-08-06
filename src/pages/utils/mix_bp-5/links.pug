@@ -1,0 +1,4 @@
+mixin iconLink(linkClassName, iconClassName, iconId, ...attr)
+  a(class=buttonClassName)&attributes(attr)
+    svg(class=iconClassName)
+      use(xlink:href=iconId)

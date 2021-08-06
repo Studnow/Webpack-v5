@@ -1,14 +1,14 @@
-.container.mb-16.mx-auto.grid.grid-cols-2.grid-rows-2.items-center.justify-center.gap-8
-  article.prose-lg.col-span-2.flex.flex-col.items-center.justify-center.h-full.bg-screen-img.bg-no-repeat.bg-center.bg-contain
-    header
-      h1.sm_text-white Pug - node template engine
-    section
+.container.mb-16.mx-auto.grid.grid-cols-2.grid-rows-2.items-center.justify-center.gap-8.overflow-hidden
+  article.first-screen.col-span-2.flex.flex-col.items-center.justify-center.h-full.bg-screen-img-webp.bg-screen-img.bg-no-repeat.bg-center.bg-contain(x-data="dropdown")
+    header.prose-lg.cursor-pointer(@click="toggle")
+      h1.text-white Pug - node template engine
+    section(:class="open ? 'opacity-100 transition-opacity delay-100 duration-500' : 'opacity-0 transition-opacity delay-50 duration-500'")
       p.text-white.
         Pug is a terse and simple templating language with a
         strong focus on performance and powerful features.
     footer.text-white
       time(datetime="2021-05-31 0:05") 31 мая
-  article.col-4.col-12-sm.prose-lg
+  article.col-4.col-12-sm.prose-lg(data-aos="fade-right")
     section.flex.flex-col.items-center.max-w-sm.mx-auto.shadow-md
       h2.text-center Pug - node template engine
       picture
@@ -19,17 +19,15 @@
         p.
           Pug is a terse and simple templating language with a
           strong focus on performance and powerful features.
-  article.col-4.col-12-sm.prose-lg
+  article.col-4.col-12-sm.prose-lg(data-aos="fade-left")
     section.flex.flex-col.items-center.max-w-sm.mx-auto.shadow-md
       h2.text-center Pug - node template engine
       picture
         source(type="image/webp" srcset=require("/src/img/webp/right.webp"))
         img(src=require("/src/img/right.jpg"), alt="")
-        //- srcset="/src/img/webp/right.webp", "/src/img/webp/left.webp", "/src/img/webp/first-bg.webp"
       .descr.px-4
         h3 Template section
         p.
           Pug is a terse and simple templating language with a
           strong focus on performance and powerful features.
-
-// img srcset for webp
+  +card
