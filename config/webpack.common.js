@@ -1,6 +1,8 @@
 const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+// const webpack = require("webpack");
+// const webpackHotMiddleware = require("webpack-hot-middleware");
 
 const PATHS = {
   src: path.join(__dirname, "../src"),
@@ -24,9 +26,9 @@ module.exports = {
     clean: true,
     publicPath: "/",
   },
-
+  target: "web",
   optimization: {
-    runtimeChunk: 'single',
+    runtimeChunk: "single",
     // usedExports: true,
     moduleIds: "deterministic",
     splitChunks: {
@@ -86,5 +88,6 @@ module.exports = {
           filename: `./${page.replace(/\.pug/, ".html")}`, // Для html без pug оставить просто ${page}
         })
     ),
+    // new webpack.HotModuleReplacementPlugin(),
   ],
 };

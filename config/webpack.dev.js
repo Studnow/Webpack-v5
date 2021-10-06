@@ -3,12 +3,16 @@ const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
   mode: "development",
-  target: "web",
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
+    // watchContentBase: true,
     publicPath: "/",
-    // hot: true,   // for js HMR, for html/pug off HMR
+    host: "0.0.0.0",
+    port: 4000,
+    // hot: false,   // for js HMR, for html/pug off HMR
+    // noInfo: true,
+    overlay: true
   },
   module: {
     rules: [

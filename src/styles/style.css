@@ -16,4 +16,5 @@
 .first-screen {
   @apply min-h-screen;
   /* background-image: var(--first-bg); */
+  /* background-color: lightcyan; */
 }

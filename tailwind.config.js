@@ -1,4 +1,4 @@
-const { colors } = require('tailwindcss/defaulttheme');
+// const { colors } = require('tailwindcss/defaulttheme');
 const myColors = require('tailwindcss/colors');
 
 module.exports = {

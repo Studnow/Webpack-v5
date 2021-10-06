@@ -1,7 +1,7 @@
 .container.mb-16.mx-auto.grid.grid-cols-2.grid-rows-2.items-center.justify-center.gap-8.overflow-hidden
   article.first-screen.col-span-2.flex.flex-col.items-center.justify-center.h-full.bg-screen-img-webp.bg-screen-img.bg-no-repeat.bg-center.bg-contain(x-data="dropdown")
-    header.prose-lg.cursor-pointer(@click="toggle")
-      h1.text-white Pug - node template engine
+    header.prose-lg.cursor-pointer(@click="toggle" x-data="{label: 'som txt'}")
+      h1.text-white(x-text="label") Pug - node template engine
     section(:class="open ? 'opacity-100 transition-opacity delay-100 duration-500' : 'opacity-0 transition-opacity delay-50 duration-500'")
       p.text-white.
         Pug is a terse and simple templating language with a
@@ -9,7 +9,7 @@
     footer.text-white
       time(datetime="2021-05-31 0:05") 31 мая
   article.col-4.col-12-sm.prose-lg(data-aos="fade-right")
-    section.flex.flex-col.items-center.max-w-sm.mx-auto.shadow-md
+    section.flex.flex-col.items-center.max-w-sm.mx-auto.shadow-md.bg-white
       h2.text-center Pug - node template engine
       picture
         source(type="image/webp" srcset=require("/src/img/webp/left.webp"))
@@ -26,8 +26,10 @@
         source(type="image/webp" srcset=require("/src/img/webp/right.webp"))
         img(src=require("/src/img/right.jpg"), alt="")
       .descr.px-4
-        h3 Template section
+        h3.text-red-800 Template section
         p.
           Pug is a terse and simple templating language with a
           strong focus on performance and powerful features.
+  +card
+  +card
   +card
