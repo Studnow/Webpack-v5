@@ -18,3 +18,7 @@
   /* background-image: var(--first-bg); */
   /* background-color: lightcyan; */
 }
+
+.white-hover {
+  @apply hover:bg-gray-100;
+}

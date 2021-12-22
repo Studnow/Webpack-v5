@@ -6,12 +6,10 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
-    // watchContentBase: true,
     publicPath: "/",
     host: "0.0.0.0",
     port: 4000,
     // hot: false,   // for js HMR, for html/pug off HMR
-    // noInfo: true,
     overlay: true
   },
   module: {

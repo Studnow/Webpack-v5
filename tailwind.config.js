@@ -2,8 +2,6 @@
 const myColors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: {
-    enabled: true,
     content: [
       "./src/**/*.html",
       "./src/**/**/*.pug",
@@ -12,9 +10,10 @@ module.exports = {
       "./src/**/**/**/**/**/*.pug",
       "./src/**/*.js",
       "./src/**/*.css",
+      "./src/**/**/*.css",
+      "./src/**/**/**/*.css",
       "./src/**/*.sass",
     ],
-  },
   // separator: "_",
   theme: {
     colors: {
@@ -35,9 +34,6 @@ module.exports = {
         "screen-img": 'url("/src/img/first-bg.jpg")',
       }),
     },
-  },
-  variants: {
-    textColor: ["active", "hover"],
   },
   plugins: [
     require('@tailwindcss/forms'),
