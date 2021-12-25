@@ -6,9 +6,9 @@ module.exports = merge(common, {
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist",
-    publicPath: "/",
-    host: "0.0.0.0",
-    port: 4000,
+    // publicPath: "./",
+    // host: "0.0.0.0",
+    // port: 4000,
     // hot: false,   // for js HMR, for html/pug off HMR
     overlay: true
   },
@@ -27,25 +27,6 @@ module.exports = merge(common, {
           "postcss-loader",
         ],
       },
-      // {
-      //   test: /\.s[ac]ss$/i,
-      //   use: [
-      //     "style-loader",
-      //     {
-      //       loader: "css-loader",
-      //       options: {
-      //         sourceMap: true,
-      //       },
-      //     },
-      //     "postcss-loader",
-      //     {
-      //       loader: "sass-loader",
-      //       options: {
-      //         sourceMap: true,
-      //       },
-      //     },
-      //   ],
-      // },
     ],
   },
 });

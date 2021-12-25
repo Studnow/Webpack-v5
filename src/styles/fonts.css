@@ -1,0 +1,43 @@
+/* marko-one-regular - latin */
+@font-face {
+  font-family: "marko-one-tr";
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/marko-one-v12-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "montserrat-tr";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v18-latin_cyrillic-regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "montserrat-tr";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/montserrat-v18-latin_cyrillic-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "montserrat-tr";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v18-latin_cyrillic-700.woff2") format("woff2");
+}
+@font-face {
+  font-family: "montserrat-tr";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/montserrat-v18-latin_cyrillic-900.woff2") format("woff2");
+}
+@font-face {
+  font-family: "mr_kindlyjasmineg-tr";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/mr_kindlyjasmineg.woff2") format("woff2");
+}
+@font-face {
+  font-family: "YouTubeSansDark";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/YouTubeSansDark-Regular.woff") format("woff");
+}

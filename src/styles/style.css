@@ -2,14 +2,21 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities"; */
 @import url(./vars.css);
+@import url(./fonts.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
+
 @layer base{
   #app {
-    @apply min-h-screen grid grid-flow-col;
+    @apply min-h-screen grid grid-flow-col font-display;
     grid-template-rows: auto 1fr auto;
+    /* font-family: "Montserrat", sans-serif; */
+  }
+  .active {
+    @apply text-yellow-1 !important;
   }
 }
 
@@ -20,5 +27,5 @@
 }
 
 .white-hover {
-  @apply hover:bg-gray-100;
+  @apply hover:bg-gray-1;
 }
