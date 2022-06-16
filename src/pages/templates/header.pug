@@ -1,0 +1,14 @@
+block header
+  // This example requires Tailwind CSS v2.0+
+  nav(x-data="{openMobileMenu: false}")
+    .max-w-7xl.mx-auto.px-2(class='sm:px-6 lg:px-8 bg-black')
+      .relative.flex.items-center.justify-between.h-16
+        .absolute.inset-y-0.right-0.flex.items-center(class='sm:hidden')
+          // Mobile menu button
+          include ./includes/buttons/menu/burger
+        .flex-1.flex.items-center.justify-between
+          // (class='sm:items-stretch sm:justify-start')
+          include ./includes/brands/brand
+          include ./includes/menu/horizontal/nav-menu
+    // Mobile menu, show/hide based on menu state.
+    include ./includes/menu/vertical/mobile
