@@ -1,7 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const PATHS = {
   src: path.join(__dirname, "../src"),
